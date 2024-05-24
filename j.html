@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/js/bootstrap.bundle.js">
+    <title>Shopper Template</title>
+    <style>
+        header{
+            background-color: white;
+            height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .shop{
+            font-size: 25px;
+            font-family: arial;
+            font-weight: bold;
+        }
+
+        nav span{
+           padding-right: 15px;
+           font-family: arial;
+           font-size: 14px;
+           color: black;
+           font-weight: bold;
+        }
+
+        .logos{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+         .bi-search,.bi-cart,.bi-person,.bi-heart{
+            padding-right: 10px;
+            font-size: 12px;
+            
+        }
+
+        .hidde{
+            position: relative;
+        }
+
+        .two{
+            position: absolute;
+            top: -3px;
+            right: -1px;
+            background-color: red;
+            padding-top: 1px;
+            padding-right: 5px;
+            padding-left: 5px;
+            padding-bottom: 1px;
+            border-radius: 15px;
+            font-family: arial;
+            font-size: 10px;
+            color: white;
+           
+        }
+
+        article{
+            text-align: center; 
+        }
+
+        .articles{
+            background-color: black;
+            color: white;
+           
+        }
+
+        .para{
+            font-size: 12px;
+            padding: 18px;
+            font-family: arial;
+            font-weight: bold;
+        }
+
+        .top-section{
+            display: flex;
+            
+        }
+
+        .first1{
+             background-image: url(./images/women1.JPG);
+            
+             background-size: 100%;
+             background-position: cover;
+             background-repeat: no-repeat;
+             width: 450px;
+             height: 400px;
+             margin: -1px;
+                }
+
+        .first2{
+            background-image: url(./images/men1.JPG);
+            background-size: 100%;
+             background-position: cover;
+             width: 450px;
+             height: 400px;
+             margin: -1px;
+        }
+
+        .first{
+            background-image: url(./images/kids1.JPG);
+            background-size: 100%;
+             background-position: cover;
+             width: 455px;
+             height: 400px;
+             margin: -1px;
+
+        }
+
+        .first1,.first2,.first .div{
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .first1 div{
+            margin-top: 120px;
+        }
+
+    
+.first.he {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first.he div{
+    margin-top: 120px;
+}
+
+.first2.he div {
+    margin-top: 120px;
+}
+.dress{
+    font-size: 35px;
+    font-family: arial;
+    font-weight: bold;
+    color: white;
+}
+
+.shopping{
+    background-color: white;
+    font-size: 15px;
+    font-family: arial;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.part{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    padding: 50px;
+    padding-bottom: 10px;
+   
+    
+
+}
+
+
+.part1{
+    display: grid;
+    grid-template-columns: 1.5fr 10.5fr;
+   
+  
+}
+
+.part span{
+    color: red;
+    font-size: 18px;
+}
+
+.part div{
+    line-height: 12px;
+    font-size: 14px;
+}
+   
+.free{
+    font-weight: 600;
+}
+
+.we{
+    color: gray;
+}
+
+.danger {
+    border: 1px solid rgb(202, 195, 195);
+    width: 80%;
+    text-align: center;
+    display: inline-block;
+}
+
+.dam{
+    text-align: center;
+}
+
+.new{
+    text-align: center;
+    margin-top: 100px;
+    font-family: arial;
+}
+
+.team{
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 10px;
+    border: none;
+}
+
+.best{
+    font-size: 33px;
+    font-weight: bold;
+}
+
+.appear{
+    width: 550px;
+    margin-left: 400px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.top-section.kids1:hover{
+    opacity: 0.7;
+}
+
+.footer-section{
+    background-color: rgba(29, 28, 28, 0.664);
+    padding-bottom: 10px;
+    
+}
+
+.bottom-section{
+    margin-top: 100px;
+    text-align: center;
+}
+
+
+.want{
+    font-family: arial;
+    font-size: 27px;
+    font-weight: 500;
+    color: white;
+    padding-top: 50px
+}
+
+.text-section{
+    width: 400px;
+    height: 60px;
+    background-color: gray;
+    font-size: 15px;
+    padding-left: 50px;
+    border:  none;
+    color: white;
+   
+}
+
+.button-section{
+    margin-bottom: 20px;
+    width: 100px;
+    height: 60px;
+    border: none;
+    background-color: gray;
+    color: white;
+    font-family: arial;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.text-section::placeholder{
+    color: white;
+    
+}
+
+.last-section{
+    display: grid;
+    grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+    padding-bottom: 50px;
+  
+    
+}
+
+
+.shoe~span{
+    display: block;
+    margin-bottom: 10px;
+    color: rgb(175, 172, 172);
+}
+
+.shoe+span{
+    margin-top: 30px;
+}
+
+.shoe{
+    font-family: arial;
+    font-size: 17px;
+    color: white;
+    font-weight: 500;
+}
+
+aside{
+    margin-top: 30px;
+    
+}
+
+.shoe.on{
+    font-size: 17px;
+}
+
+aside span{
+    margin-right: 10px;
+}
+
+.teams{
+    border: 1px solid gray;
+    display: inline-block;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.least{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: rgb(185, 183, 183);
+    padding-top: 10px;
+    padding-bottom: 30px;
+}
+
+.copy{
+    font-family: arial;
+    font-size: 12px;
+}
+
+.magic{
+    margin-left: 50px;
+}
+
+.middle-section{
+display: flex;
+align-items: center;
+justify-content: center;
+margin-top: 50px;
+}
+
+     
+    </style>
+</head>
+<body>
+    
+<div class="parent">
+
+    <header>
+        <div class="shop">
+            <span>Shopper.</span>
+        </div>
+
+        <nav>
+           
+            <span>Home</span>
+            <span>Catalog</span>
+            <span>Shop</span>
+            <span>Pages</span>
+            <span>Blog</span>
+            <span>Docs</span>
+            
+        </nav>
+
+        <div class="logos">
+            <span class="bi bi-search"></span>
+            <span class="bi bi-person"></span>
+            <span class="bi bi-heart"></span>
+             <div class="hidde"> <span class="bi bi-cart"> 
+                <div class="two">2</div> 
+             </span>
+            </div>
+
+        
+        
+    </header>
+
+    <article>
+       <div class="articles">
+        <p class="para">HAPPY HOLIDAY DEALS ON EVERYTHING</p>
+       </div>
+    </article>
+
+ <div class="top-section">
+    <div class="first1 he">
+        
+         <div class="dress">Women</div>
+         <div class="shopping">Shop Women <span class="bi bi-arrow-right-short"></span></div>
+    </div>
+
+    <div class="first2 he">
+        
+         <div class="dress">Men</div>
+         <div class="shopping">Shop Men <span class="bi bi-arrow-right-short"></span></div>
+    </div>
+
+    
+    <div class="first he">
+        
+        
+            <div class="dress">Kids</div>
+            <div class="shopping">Shop Kids <span class="bi bi-arrow-right-short"></span></div>
+        
+    </div>
+ </div>
+
+ <div class="part">
+
+    <div class="part1">
+
+        <span class="bi bi-truck"></span>
+        <div>
+            <p class="free">FREE SHIPPING</p>
+            <P class="we">From all orders over $100</P>
+        </div>
+
+    </div>
+
+    <div  class="part1">
+
+        <span class="bi bi-shuffle"></span>
+
+        <div>
+            <p class="free">FREE RETURNS</p>
+            <P class="we">Return money eithin 30 days</P>
+        </div>
+
+    </div>
+
+    <div  class="part1">
+
+        <span class="bi bi-lock"></span>
+        <div>
+            <p class="free">SECURE SHOPPING</p>
+            <p class="we">You'are in safe hands</p>
+        </div>
+
+    </div>
+
+    <div  class="part1">
+        <span class="bi bi-tag"></span>
+        <div>
+            <p class="free">OVER 10,000 STYLES</p>
+            <p class="we">We have everything you need</p>
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<div class="dam">
+    <span  class="danger"></span>
+
+</div>
+
+<div class="new">
+<div class="team">
+    NEW COLLECTION
+</div>
+
+<div class="best"> 
+    Best Picks 2019
+</div>
+
+
+    <div class="appear">
+        Appear, dry there darkness they're seas, dry waters thing fly mindst. Beast, above fly brought very green.
+    </div>
+
+
+</div>
+
+<div class="middle-section">
+
+    <div class="neet">
+
+    </div>
+
+    <div class="neets">
+
+    </div>
+
+</div>
+
+<div class="footer-section">
+
+    <div class="bottom-section">
+
+        <p class="want">Want style ideas and Treats?</p>
+        <input class="text-section" type="text" placeholder="Enter Email*">
+        <button class="button-section">Subscribe</button>
+        
+    </div>
+
+    <div class="last-section">
+        <div class="shopper">
+
+            <span class="shoe on">Shopper</span>
+
+            <aside>
+                <span class="bi bi-facebook"></span>
+                <span class="bi bi-youtube"></span>
+                <span class="bi bi-twitter"></span>
+                <span class="bi bi-instagram"></span>
+                
+            </aside>
+
+        </div>
+
+        <div>
+            <span class="shoe">SUPPORT</span>
+            <span>Contact Us</span>
+            <span>FAQs</span>
+            <span>Size Guide</span>
+            <span>Shipping & Returns</span>
+        </div>
+
+        <div>
+            <span class="shoe">SHOP</span>
+            <span>Men's Shopping</span>
+            <span>Women's Shopping</span>
+            <span>Kid's Shopping</span>
+            <span>Discounts</span>
+        </div>
+
+        <div>
+            <span class="shoe">COMPANY</span>
+            <span>Our Story</span>
+            <span>Careers</span>
+            <span>Terms & Conditions</span>
+            <span>Privacy & Cookies policy</span>
+        </div>
+
+        <address>
+            <span class="shoe">CONTACT</span>
+            <span>1-202-555-0105</span>
+            <span>1-202-555-0106</span>
+            <span><a href="#">help@shopper.com</a></span>
+        </address>
+            
+        <div>
+      
+    </div>
+
+</div>
+
+<div class="teams"></div>
+
+<div class="least">
+
+    <div>
+        <span class="copy">&copy;2019 All rights reserved. Designed by Unvab</span>
+    </div>
+
+    <div class="magic">
+        <img src="./images/v1.JPG" alt="photos">
+        <img src="./images/v2.JPG" alt="photos">
+        <img src="./images/v3.JPG" alt="photos">
+        <img src="./images/v4.JPG" alt="photos">
+        <img src="./images/v5.JPG" alt="photos">
+        <img src="./images/v6.JPG" alt="photos">
+    </div>
+
+</div>
+
+</div>
+
+</body>
+</html>
